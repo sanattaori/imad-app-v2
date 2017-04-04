@@ -37,9 +37,6 @@ app.get('/test-db',function(req,res){
     });
 });
 
-app.get('/tes-dbt',function(req, res){
-    
-}); 
 
 app.get('/maps', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'maps.html'));
