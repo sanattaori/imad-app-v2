@@ -42,15 +42,15 @@ app.post('/create-user-n',function(req,res){
     
     var salt = cryptorandomBytes(128).toString('hex');
     var dbstring = hash(password,salt);
-    pool.query('INSERT INTO "user"(username,password) VALUES($1,$2)',[username,dbString,function(err,result){
+    pool.query('INSERT INTO "user"(username,password) VALUES($1,$2)',[username,dbString],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
         else{
             res.send('User successfully created: '+ username);
         }
-        }
-    }]) 
+        
+    });
 
     
 });
