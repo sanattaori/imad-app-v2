@@ -21,8 +21,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="354088582052-r8tr1m02h6s8t694idid96nqp2cik495.apps.googleusercontent.com">
 
-        <title>Sanat Taori</title>
-
+        
     </head>
     <body>
         
@@ -40,7 +39,55 @@
   
 </div>
 
+<!--menu-->
+<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title"> </span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="waterfall-exp">
+        </div>
+      </div>
+    </div>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" >Home</a>
+        <a class="mdl-navigation__link" href="/voice">Dictate me!</a>
+        <a class="mdl-navigation__link" href="/voice">Fire Chat</a>
+        <div class="g-signin2" id="signin" data-onsuccess="onSignIn"></div>
+        <div id="hideit">
+            
+        <div id="hideit">
+        <a href="#" onclick="signOut();">Sign out</a>
+        </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Projects</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/voice">Dictate Me!</a>
+      <a class="mdl-navigation__link" href="/maps">Maps</a>
+            <a class="mdl-navigation__link" href="">Fire Chat</a>
 
+      
+      
+    </nav>
+  </div>
   <main class="mdl-layout__content">
     <div class="page-content"><!-- Your content goes here -->
 
@@ -145,7 +192,6 @@
  
 <br>
   <textarea id="name" rows="4" cols="50" placeholder="Type your comment here..."></textarea>
-
           
            <br>
           
