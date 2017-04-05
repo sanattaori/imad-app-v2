@@ -15,13 +15,7 @@ var config = {
 };
 
 //////////////////////////////////////////////////////
-
-
-
-
-const encrypted = 'ca981be48e90867604588e75d04feabb63cc007a8f8ad89b10616ed84d815504';
-decrypted += decipher.final('utf8');
-console.log(decrypted);
+console.log(process.env);
 
 //////////////////////////////////////////////////////
 
