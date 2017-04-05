@@ -2,11 +2,7 @@ console.log('Loaded!');
 
 
 
-/*-------------------------------google sign in-------------------
-*/
 
-
-/*-------------------------------*/
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
@@ -50,8 +46,17 @@ submit.onclick = function(){
 alert('click on sign in button to post your comment');
 }
 
+  var x = document.getElementById('hideit');
+ x.style.display = 'none';
 //submit
 function onSignIn(googleUser) {
+    
+  
+  
+        x.style.display = 'block';
+  
+  //      x.style.display = 'none';
+  
     var profile = googleUser.getBasicProfile();
         console.log('Full Name: ' + profile.getName());
         console.log('Given Name: ' + profile.getGivenName());
