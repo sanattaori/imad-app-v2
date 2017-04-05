@@ -14,6 +14,17 @@ var config = {
     
 };
 
+//////////////////////////////////////////////////////
+
+
+
+
+const encrypted = 'ca981be48e90867604588e75d04feabb63cc007a8f8ad89b10616ed84d815504';
+decrypted += decipher.final('utf8');
+console.log(decrypted);
+
+//////////////////////////////////////////////////////
+
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
@@ -32,7 +43,6 @@ function hash(input,salt) {
 app.get('/hash/:input',function(req,res){
     var hashedString = hash(req.params.input,'this-is-random-string');
     res.send(hashedString);
-    
 });
 
 app.post('/create-user-n',function(req,res){
